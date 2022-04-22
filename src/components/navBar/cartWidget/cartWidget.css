@@ -1,0 +1,47 @@
+.menu--button-size {
+    padding: .4rem .6rem;
+    border-radius: 1rem;
+  }
+  
+  .menu--button-bg {
+    background-color: #adccc7;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .button--img-size{
+    height: 2rem;
+  }
+
+  .button--img-size:hover{
+    animation-name: moveCart;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+
+  }
+
+  .button--counter-size{
+    padding: .2em .4em;
+  }
+
+  .button--counter-bg{
+    background-color: burlywood;
+  }
+
+  .button--counter-position{
+    position: absolute;
+    top: 2rem;
+    right: .2rem;
+  }
+
+  @keyframes moveCart {
+    0%{
+      transform: translate(0px);
+    }
+    50%{
+      transform: translate(5px);
+    }
+    100%{
+      transform: translate(0px);
+    }
+  }

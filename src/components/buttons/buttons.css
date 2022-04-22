@@ -1,0 +1,37 @@
+.button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 0.6rem 0.4rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.primaryButton {
+  background-color: #29435c;
+  color: #adccc7;
+  transition: all 500ms;
+}
+
+.secondaryButton {
+  background-color: #adccc7;
+  color: #1d3d18;
+  transition: all 500ms;
+}
+
+.disabledButton {
+  cursor: not-allowed;
+  filter: grayscale(0.7);
+}
+
+.primaryButton:hover {
+  background-color: #192c40;
+  color: #c0d2cf;
+}
+
+.secondaryButton:hover {
+  background-color: #698a85;
+  color: #cfcece;
+}

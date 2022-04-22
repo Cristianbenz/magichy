@@ -1,0 +1,89 @@
+.buyForm-height{
+    height: max-content;
+  }
+
+  .buyForm-position{
+    position: sticky;
+    top: 1rem;
+  }
+
+  .buyForm-bg{
+    background-color: #81a7a0;
+  }
+
+  .buyForm-layout{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: .2em;
+  }
+
+  .buyForm--label--layout{
+    display: grid;
+    grid-template-columns: 36% auto;
+    padding: .5em;
+  }
+
+  .buyForm--label-text{
+    font-size: 1.5em;
+    font-weight: 600;
+  }
+
+  .label--buyInput-bg{
+    background-color: transparent;
+  }
+
+  .label--buyInput-border{
+    border: none;
+    border-bottom: .1em solid black;
+  }
+
+  .label--buyInput-text{
+    font-weight: 600;
+  }
+
+  .buyForm--radio--margin{
+    margin-left: .5em;
+  }
+
+  .orderModal--size{
+    width: 0;
+    height: 0;
+    animation-name: orderShow;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+
+  .orderModal--position{
+    position: absolute;
+    top: 3rem;
+    left: 26rem;
+  }
+
+  .orderModal--bg{
+    background-color: #e4e3d4;
+  }
+
+  .orderModal--h2-text{
+    margin: 1rem;
+    text-align: center;
+  }
+
+  .orderModal--p-text{
+    text-align: center;
+  }
+
+  @keyframes orderShow {
+    0% {
+      width: 0;
+      height: 0;
+      opacity: 0;
+      font-size: 0;
+    }
+
+    100%{
+      width: 26rem;
+      min-height: 13rem;
+      opacity: 1;
+    }
+  }

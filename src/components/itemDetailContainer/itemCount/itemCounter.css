@@ -1,0 +1,38 @@
+
+.product--counter-layout{
+    display: flex;
+    gap: 1rem;
+    border-radius: .5rem;
+}
+
+.product--price--text{
+    align-self: flex-start;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.product--price-margin{
+    margin-bottom: 1.3rem;
+}
+
+.counter--num-size{
+    width: 6rem;
+}
+
+.counter--num-bg{
+    background-color: #ADCCC7;
+}
+
+.counter--num-layout{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.counter--num-text{
+    text-align: center;
+}
+
+.counter--link--text{
+    text-decoration: none;
+}

@@ -1,0 +1,40 @@
+.filter-size{
+    height: min-content;
+}
+
+.filter-border{
+    border-radius: .2rem;
+    box-shadow: 0 0 .5rem #1a2d3f;
+}
+
+.filter-position{
+    position: sticky;
+    top: 1rem;
+    margin: 3rem 0 3rem 1rem;
+}
+
+.filter-bg{
+    background-color: #152A38;
+}
+
+.filter-layout{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.filter--link-text{
+    margin: .6rem 0;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #ADCCC7;
+}
+
+.filter--link-text:hover{
+    color: #6b8d87;
+}
+
+.filter--link-text:focus{
+    color: #6b8d87;
+}

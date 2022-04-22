@@ -1,0 +1,33 @@
+.app--nav-layout {
+  display: grid;
+  grid-template-columns: 7% auto;
+  align-items: center;
+  padding: 0.4rem;
+}
+
+.app--nav-bg {
+  background-color: #152a38;
+}
+
+.nav--brand-img {
+  background-image: url("https://images.vexels.com/media/users/3/203312/isolated/lists/e1a51c32b1d0e0afc5927d7cfa3d571a-icono-de-libro-abierto-icono-de-libro.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.nav--brand-size {
+  padding-top: 66%;
+  width: 90%;
+  margin-left: 1rem;
+}
+
+@media screen and (max-width: 678px) {
+  .app--nav-layout{
+    grid-template-columns: 9% auto;
+  }
+
+  .nav--brand-size {
+    width: 100%;
+  }
+}

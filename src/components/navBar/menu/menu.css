@@ -1,0 +1,27 @@
+.nav--menu-position {
+    justify-self: flex-end;
+  }
+  
+.nav--menu-layout {
+  display: flex;
+  align-items: center;
+}
+
+.menu--anchor-text {
+  margin: 0% 1rem;
+  text-decoration: none;
+  border-bottom: .2rem whitesmoke transparent;
+  color: #adccc7;
+  font-weight: 600;
+  transition: all 100ms;
+}
+
+.menu--anchor-text:hover{
+  color: #6b8d87;
+  border-bottom: .2rem whitesmoke solid;
+}
+
+.menu--anchor-text:focus {
+  color: #6b8d87;
+}
+

@@ -1,0 +1,29 @@
+.skeletonLoader-size{
+    width: 90%;
+}
+
+.skeletonLoader-layout{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 3rem 5em;
+}
+
+.itemPlaceholder-bg {
+    background-color: #adccc7;
+    background: linear-gradient(to right, #adccc7 8%, #58c0af 18%, #adccc7 33%);
+    animation-name: placeholder;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    overflow: hidden;
+    width: 15rem;
+    height: 20rem;
+  }
+  
+  @keyframes placeholder {
+    0% {
+      background-position: -10px 0;
+    }
+    100% {
+      background-position: 200px 0;
+    }
+  }

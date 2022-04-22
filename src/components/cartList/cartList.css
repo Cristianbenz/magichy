@@ -1,0 +1,48 @@
+.cartList-bg {
+  background-color: #81a7a0;
+}
+
+.cartList-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 6.1rem;
+}
+
+.list--listItem-layout {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.listItem--img-size {
+  width: 7rem;
+  height: 10rem;
+}
+
+.cartList--total-height {
+  height: 15vh;
+}
+
+.cartList--total-bg {
+  background-color: #29435c;
+}
+
+.total--price-height {
+  height: 3rem;
+}
+
+.total--price-bg {
+  background-color: #adccc7;
+}
+
+.total--price-layout {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.6em;
+}
+
+.total--price-text {
+  font-size: 1.5em;
+  line-height: 3rem;
+}

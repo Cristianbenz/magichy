@@ -1,10 +1,12 @@
-.nav--menu-position {
-    justify-self: flex-end;
-  }
-  
+.navBar--nav-position {
+  justify-self: flex-end;
+}
+
 .nav--menu-layout {
   display: flex;
   align-items: center;
+  list-style-type: none;
+  margin-bottom: 0;
 }
 
 .menu--anchor-text {
@@ -25,3 +27,33 @@
   color: #6b8d87;
 }
 
+@media screen and (max-width: 768px) {
+  .navbar-nav--mobile {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      width: 100vw;
+      height: 100vh;
+      display: none;
+      gap: 2rem;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      background-color: #152a38;
+  }
+
+  .navbar-nav_open {
+      display: flex;
+  }
+  
+  .nav--menu-layout{
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-top: 3rem;
+  }
+  
+  .menu--anchor-text{
+      font-size: 2rem;
+  }
+}

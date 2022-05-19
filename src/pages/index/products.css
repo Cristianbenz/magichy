@@ -1,4 +1,4 @@
 .produts-layout{
     display: grid;
-    grid-template-columns: minmax(14rem, 20%) auto ;
+    grid-template-columns: max-content auto ;
 }

@@ -21,7 +21,10 @@
 }
 
 .cartList--total-height {
-  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  height: max-content;
 }
 
 .cartList--total-bg {

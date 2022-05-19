@@ -1,4 +1,5 @@
 .filter-size{
+    width: 13rem;
     height: min-content;
 }
 
@@ -21,6 +22,7 @@
     padding: 1rem;
     display: flex;
     flex-direction: column;
+    list-style-type: none;
 }
 
 .filter--link-text{
@@ -37,4 +39,9 @@
 
 .filter--link-text:focus{
     color: #6b8d87;
+}
+
+.offcanvas{
+    color: #ADCCC7;
+    background-color: #152A38 !important;
 }

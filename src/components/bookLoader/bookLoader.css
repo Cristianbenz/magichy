@@ -1,5 +1,5 @@
 .bookLoader-position{
-    margin: 35vh 39%;
+    margin: 2% 40% 2% 38%;
     animation-name: spinner;
     animation-duration: 1s;
     animation-timing-function: linear;
@@ -14,4 +14,10 @@
     100%{
         transform: rotateZ(360deg);
     }
+}
+
+@media screen and (max-width: 678px) {
+    .bookLoader-position {
+        margin: 2% 32% 2% 30%;
+    }  
 }

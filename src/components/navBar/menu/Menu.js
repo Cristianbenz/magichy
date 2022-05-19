@@ -1,14 +1,19 @@
 import { Link } from 'react-router-dom';
-import CartWidget from '../cartWidget/CartWidget';
 import './menu.css';
 
-export default function Menu () {
+export default function Menu ({ state }) {
+  const IS_OPEN = !state ? '' : ' navbar-nav_open'
 
   return (
-    <div className="nav--menu-position nav--menu-layout">
-      <Link to={"/aboutUs"} className={ 'menu--anchor-text'} >Sobre Nosotros</Link>
-      <Link to={"/frequentQuestions"} className={ 'menu--anchor-text'}>Preguntas Frecuentes</Link>
-      <CartWidget />
-    </div>
+    <nav className={`navBar--nav-position nav--menu-layout navbar-nav--mobile ${IS_OPEN}`}>
+      <ul className='nav--menu-layout'>
+        <li>
+          <Link to={"/aboutUs"} className={ 'menu--anchor-text'} >Sobre Nosotros</Link>
+        </li>
+        <li>
+          <Link to={"/frequentQuestions"} className={ 'menu--anchor-text'}>Preguntas Frecuentes</Link>
+        </li>
+      </ul>
+    </nav>
   );
 };

@@ -19,7 +19,7 @@ export default function ItemDetailContainer() {
     getDetail( productId )
       .then((book) => setItem({ id: book.id, ...book.data() }))
       .finally(function () {
-        setLoading(false);
+        setLoading(true);
       });
   }, [productId]);
 

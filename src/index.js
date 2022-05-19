@@ -4,7 +4,6 @@ import getFireStoreApp from "./services/firebase/config";
 import { BrowserRouter } from "react-router-dom";
 import aos from "aos";
 import App from "./App";
-import "./index.css";
 import 'aos/dist/aos.css';
 
 aos.init();

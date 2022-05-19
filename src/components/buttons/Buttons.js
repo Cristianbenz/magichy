@@ -27,8 +27,8 @@ export default function Buttons({ type, content, action, inactive }) {
   }, [inactive])
 
   return (
-    <div onClick={action} className={`button ${color} ${disabled} `}>
-      <p>{content}</p>
-    </div>
+    <button onClick={action} className={`button ${color} ${disabled} `}>
+      {content}
+    </button>
   );
 }

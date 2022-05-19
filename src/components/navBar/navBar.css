@@ -1,33 +1,64 @@
-.app--nav-layout {
+.app--navBar-layout {
   display: grid;
-  grid-template-columns: 7% auto;
+  grid-template-columns: max-content auto max-content;
   align-items: center;
-  padding: 0.4rem;
+  align-content: center;
+  padding: 0rem 0.4rem;
+  height: max-content;
 }
 
-.app--nav-bg {
+.app--navBar-bg {
   background-color: #152a38;
 }
+.navbar--navToggler{
+  display: none;
+}
 
-.nav--brand-img {
+.navBar--brand-img {
   background-image: url("https://images.vexels.com/media/users/3/203312/isolated/lists/e1a51c32b1d0e0afc5927d7cfa3d571a-icono-de-libro-abierto-icono-de-libro.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%;
+  background-size: contain;
 }
 
-.nav--brand-size {
-  padding-top: 66%;
-  width: 90%;
+.navBar--brand-size {
+  height: 4.5rem;
+  width: 4.5rem;
   margin-left: 1rem;
 }
 
-@media screen and (max-width: 678px) {
-  .app--nav-layout{
-    grid-template-columns: 9% auto;
+@media screen and (max-width: 768px) {
+  .app--navBar-layout{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .8rem;
+    height: 4rem;
+  }
+  
+  .navbar--navToggler{
+      position: absolute;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 2.5rem;
+      height: 2.5rem;
   }
 
-  .nav--brand-size {
-    width: 100%;
+  .navBar--brand-size {
+    padding-top: 7%;
+    height: 4rem;
+    width: 4rem;
+    margin-left: 0;
+  }
+
+  .navBar--brand-position{
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 45%;
+    right: 45%;
   }
 }

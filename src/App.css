@@ -1,5 +1,19 @@
-*{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body,
+#root {
+  min-height: 100vh;
+}
+
+body {
+  background-color: #1d3842;
+  overflow-x: hidden;
+}
+
+p {
+  margin-bottom: 0;
 }

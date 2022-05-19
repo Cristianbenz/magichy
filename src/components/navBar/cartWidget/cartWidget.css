@@ -45,3 +45,9 @@
       transform: translate(0px);
     }
   }
+
+  @media screen and (max-width: 768px) {
+    .menu--button-size {
+      z-index: 3;
+    }
+  }

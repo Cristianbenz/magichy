@@ -1,13 +1,22 @@
+.notificationBox{
+    width: 20rem;
+    min-height: 4rem;
+    position: fixed;
+    bottom: 0;
+    right: 20%;
+}
+
 .notification--size{
+    min-width: max-content;
     padding: 1rem;
 }
 
 .notification--position{
-    position: absolute;
-    bottom: .6rem;
-    left: 43%;
+    visibility: hidden;
     animation-name: show;
-    animation-duration: 3050ms;
+    animation-duration: 2500ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 .notification--text{
@@ -23,16 +32,23 @@
     background-color: rgba(106, 24, 11, 0.701);
 }
 
+.hide {
+    visibility: hidden;
+}
+
 @keyframes show {
     0% {
-    bottom: .5rem;
-    opacity: 0;
+        margin-bottom: -.5;
+        visibility: hidden;
+        opacity: 0;
     }
     50% {
-        bottom: 1rem;
+        margin-bottom: 1rem;
+        visibility: visible;
         opacity: 1;
     }
     100%{
         opacity: 0;
+        visibility: hidden;
     }
 }

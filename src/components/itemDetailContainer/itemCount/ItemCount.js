@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Buttons from "../../buttons/Buttons";
-import Notification from "../../notification/Notification";
+import {Notification} from "../../notification/Notification";
 import './itemCounter.css'
 
 export default function ItemCount ({ id, cover, title, stock, price, initial, addOn }) {

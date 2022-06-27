@@ -2,21 +2,22 @@ import { Link } from "react-router-dom";
 import "./footer.css";
 
 export default function Footer() {
+  
+  const FooterLink = ( { children, to } ) => (
+    <li className="enlaces--li">
+      <Link to={to}>{children}</Link>
+    </li>
+  )
+
   return (
     <footer className="footer-bg  footer-text">
       <section className="footer--top-layout">
         <article>
           <p className="footer--subTitle-text">Enlaces:</p>
           <ul>
-            <li className="enlaces--li">
-              <Link to={"/"}>Inicio</Link>
-            </li>
-            <li className="enlaces--li">
-              <Link to={"/aboutUs"}>Sobre Nosotros</Link>
-            </li>
-            <li className="enlaces--li">
-              <Link to={"/frequentQuestions"}>Preguntas Frecuentes</Link>
-            </li>
+            <FooterLink to={'/'}>Inicio</FooterLink>
+            <FooterLink to={'/aboutUs'}>Sobre Nosotros</FooterLink>
+            <FooterLink to={'/frequentQuestions'}>Preguntas Frecuentes</FooterLink>
           </ul>
         </article>
         <article className="footer--methods-position">

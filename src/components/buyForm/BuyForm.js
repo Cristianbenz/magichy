@@ -2,8 +2,8 @@ import { useState } from "react";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { useCartContext } from "../../context/cartContext";
 import Buttons from "../buttons/Buttons";
+import {Notification} from "../notification/Notification";
 import "./buyForm.css";
-import Notification from "../notification/Notification";
 
 export default function BuyForm() {
   const { cartList, updateTotalPrice } = useCartContext();

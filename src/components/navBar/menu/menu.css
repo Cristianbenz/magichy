@@ -18,13 +18,9 @@
   transition: all 100ms;
 }
 
-.menu--anchor-text:hover{
+.menu--anchor-text:hover, .menu--anchor--active{
   color: #6b8d87;
   border-bottom: .2rem whitesmoke solid;
-}
-
-.menu--anchor-text:focus {
-  color: #6b8d87;
 }
 
 @media screen and (max-width: 768px) {

@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { Button, Offcanvas } from "react-bootstrap";
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Offcanvas } from "react-bootstrap";
 
 import Buttons from "../buttons/Buttons";
 
@@ -12,25 +12,28 @@ export default function Filtro() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const FilterLink = ({to, children}) => {
+    const {pathname}  = useLocation();
+    const IS_ACTIVE = (pathname.replaceAll('%20', ' ') === to) && 'menu--anchor--active';
+    return (
+      <li>
+        <Link to={to} className={ `filter--link-text ${IS_ACTIVE}`} >{children}</Link>
+      </li>
+    )
+  }
+
+
   return (
     <>
       {visualViewport.width > 768 ? (
-        <aside className="filter-size filter-border filter-position filter-bg filter-layout">
-          <Link className="filter--link-text" to={"/category/Aventura"}>
-            Aventura
-          </Link>
-          <Link className="filter--link-text" to={"/category/Ciencia Ficcion"}>
-            Ciencia Ficcion
-          </Link>
-          <Link className="filter--link-text" to={"/category/Terror"}>
-            Terror
-          </Link>
-          <Link className="filter--link-text" to={"/category/Fantasia"}>
-            Fantasia
-          </Link>
-          <Link className="filter--link-text" to={"/category/Romance"}>
-            Romance
-          </Link>
+        <aside className="filter-size filter-border filter-position filter-bg">
+          <ul className="filter-layout">
+            <FilterLink to={"/category/Aventura"} >Aventura</FilterLink>
+            <FilterLink to={"/category/Ciencia Ficcion"} >Ciencia Ficcion</FilterLink>
+            <FilterLink to={"/category/Terror"} >Terror</FilterLink>
+            <FilterLink to={"/category/Fantasia"} >Fantasia</FilterLink>
+            <FilterLink to={"/category/Romance"} >Romance</FilterLink>
+          </ul>
         </aside>
       ) : (
         <aside className="filter-position">

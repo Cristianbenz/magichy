@@ -1,27 +1,34 @@
-import { useState, useEffect } from "react";
-import './notification.css'
+import "./notification.css";
 
-export default function Notification({ text, type }) {
-  const [isActive, setIsActive] = useState(true);
-  useEffect(() => {
-    setIsActive(true);
-    setTimeout(() => {
-        setIsActive(false);
-      }, 3000);
 
-    return () => setIsActive(false)
-  }, []);
 
-  return (
-    <>
-      {isActive ? (
-        <span
-          className={`notification--size notification--position notification--text ${type}`}
-          onClick={() => setIsActive(false)}
+export function Notification({ text, type }) {
+  const NotificationBox = ( { children } ) => {
+    return <div className="notificationBox">{children}</div>;
+  };
+
+  const style = (theme) => {
+    switch (theme) {
+      case "succes":
+        return "succes";
+      case "error":
+        return "error";
+      default:
+        return "hide";
+    }
+  };
+    return (
+      <NotificationBox>
+        <div
+          className={`notification--size 
+                    notification--position 
+                    notification--text 
+                    ${style(type)}
+                  `}
+          onClick={() => style("")}
         >
           {text}
-        </span>
-      ) : null}
-    </>
-  );
+        </div>
+      </NotificationBox>
+    );
 }

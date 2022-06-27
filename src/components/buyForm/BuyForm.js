@@ -124,7 +124,7 @@ export default function BuyForm() {
         </div>
         <Buttons type={"primary"} content={"Finalizar"} action={makeOrder} />
       </section>
-      {(orderId !== "") ? (
+      {(orderId !== "") && (
         <section className="orderModal--size orderModal--position orderModal--bg">
         <Buttons type={"secondary"} content={'x'} action={() => setOrderId("")} />
         <h2 className="orderModal--h2-text">
@@ -132,10 +132,7 @@ export default function BuyForm() {
         </h2>
         <p className="orderModal--p-text">Su identificador de orden es: {orderId}</p>
       </section>
-      )
-        : 
-        null
-      }
+      )}
 
       { (formError === '' ) ? null : <Notification type={'error'} text={formError} /> }
       

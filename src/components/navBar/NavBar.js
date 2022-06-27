@@ -1,11 +1,16 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom';
 import Menu from "./menu/Menu";
 import CartWidget from './cartWidget/CartWidget'
 import './navBar.css';
 
 export default function NavBar () {
+  const {pathname} = useLocation()
   const [ isNavOpen, setIsNavOpen ] = useState(false)
+
+  useEffect( () => {
+    setIsNavOpen(false)
+  }, [pathname])
 
   const openNav = () => setIsNavOpen(!isNavOpen)
 

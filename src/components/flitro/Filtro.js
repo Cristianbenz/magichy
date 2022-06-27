@@ -49,34 +49,11 @@ export default function Filtro() {
             </Offcanvas.Header>
             <Offcanvas.Body>
               <ul className="filter-layout">
-                <li>
-                  <Link className="filter--link-text" to={"/category/Aventura"}>
-                    Aventura
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="filter--link-text"
-                    to={"/category/Ciencia Ficcion"}
-                  >
-                    Ciencia Ficcion
-                  </Link>
-                </li>
-                <li>
-                  <Link className="filter--link-text" to={"/category/Terror"}>
-                    Terror
-                  </Link>
-                </li>
-                <li>
-                  <Link className="filter--link-text" to={"/category/Fantasia"}>
-                    Fantasia
-                  </Link>
-                </li>
-                <li>
-                  <Link className="filter--link-text" to={"/category/Romance"}>
-                    Romance
-                  </Link>
-                </li>
+              <FilterLink to={"/category/Aventura"} >Aventura</FilterLink>
+            <FilterLink to={"/category/Ciencia Ficcion"} >Ciencia Ficcion</FilterLink>
+            <FilterLink to={"/category/Terror"} >Terror</FilterLink>
+            <FilterLink to={"/category/Fantasia"} >Fantasia</FilterLink>
+            <FilterLink to={"/category/Romance"} >Romance</FilterLink>
               </ul>
             </Offcanvas.Body>
           </Offcanvas>

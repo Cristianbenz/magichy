@@ -1,76 +1,102 @@
-.buyForm-height{
-    height: max-content;
-  }
+.buyForm-height {
+  height: max-content;
+}
 
-  .buyForm-position{
-    position: sticky;
-    top: 1rem;
-  }
+.buyForm-position {
+  position: sticky;
+  top: 1rem;
+}
 
-  .buyForm-bg{
-    background-color: #81a7a0;
-  }
+.buyForm-bg {
+  background-color: #81a7a0;
+}
 
-  .buyForm-layout{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: .2em;
-  }
+.buyForm-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.2em;
+}
 
-  .buyForm--label--layout{
-    display: grid;
-    grid-template-columns: 36% auto;
-    padding: .5em;
-  }
+.buyForm--label--layout {
+  display: grid;
+  grid-template-columns: 36% auto;
+  padding: 0.5em;
+}
 
-  .buyForm--label-text{
-    font-size: 1.5em;
-    font-weight: 600;
-  }
+.buyForm--label-text {
+  font-size: 1.5em;
+  font-weight: 600;
+}
 
-  .label--buyInput-bg{
-    background-color: transparent;
-  }
+.label--buyInput-bg {
+  background-color: transparent;
+}
 
-  .label--buyInput-border{
-    border: none;
-    border-bottom: .1em solid black;
-  }
+.label--buyInput-border {
+  border: none;
+  border-bottom: 0.1em solid black;
+}
 
-  .label--buyInput-text{
-    font-weight: 600;
-  }
+.label--buyInput-text {
+  font-weight: 600;
+  width: 100%;
+}
 
-  .buyForm--radio--margin{
-    margin-left: .5em;
-  }
+.buyForm--radio--margin {
+  margin-left: 0.5em;
+}
 
-  .orderModal--size{
+.orderModal--size {
+  width: 0;
+  height: 0;
+  animation-name: orderShow;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.orderModal--position {
+  position: fixed;
+  top: 20%;
+  left: 35vw;
+  right: 35vw;
+}
+
+.orderModal--bg {
+  background-color: #e4e3d4;
+}
+
+.orderModal--h2-text {
+  margin: 1rem;
+  text-align: center;
+}
+
+.orderModal--p-text {
+  text-align: center;
+}
+
+@keyframes orderShow {
+  0% {
     width: 0;
     height: 0;
-    animation-name: orderShow;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
+    opacity: 0;
+    font-size: 0;
   }
 
-  .orderModal--position{
-    position: absolute;
-    top: 3rem;
-    left: 26rem;
+  100% {
+    width: 26rem;
+    min-height: 13rem;
+    opacity: 1;
   }
+}
 
-  .orderModal--bg{
-    background-color: #e4e3d4;
-  }
+@media screen and (max-width: 678px) {
 
-  .orderModal--h2-text{
-    margin: 1rem;
-    text-align: center;
-  }
-
-  .orderModal--p-text{
-    text-align: center;
+  .orderModal--position {
+    position: fixed;
+    top: 10%;
+    left: 4vw;
+    right: 4vw;
   }
 
   @keyframes orderShow {
@@ -81,9 +107,10 @@
       font-size: 0;
     }
 
-    100%{
-      width: 26rem;
+    100% {
+      width: 90vw;
       min-height: 13rem;
       opacity: 1;
     }
   }
+}
